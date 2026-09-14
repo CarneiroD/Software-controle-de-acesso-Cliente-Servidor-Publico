@@ -1,0 +1,56 @@
+﻿<Application x:Class="WpfApp1.Cliente.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp1.Cliente"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="CorFundo" Color="#1E1E2E"/>
+        <SolidColorBrush x:Key="CorTextoPrimario" Color="#F1F1F6"/>
+        <SolidColorBrush x:Key="CorTextoSecundario" Color="#9CA3AF"/>
+        <SolidColorBrush x:Key="CorDisponivel" Color="#38BDF8"/>
+        <SolidColorBrush x:Key="CorEmUso" Color="#22C55E"/>
+        <SolidColorBrush x:Key="CorBloqueado" Color="#EF4444"/>
+        <SolidColorBrush x:Key="CorAviso" Color="#F59E0B"/>
+
+        <Style x:Key="EstiloBotaoBase" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Fundo"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Fundo" Property="Opacity" Value="0.85"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Fundo" Property="Opacity" Value="0.7"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Fundo" Property="Opacity" Value="0.35"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="EstiloBotaoPrimario" TargetType="Button" BasedOn="{StaticResource EstiloBotaoBase}">
+            <Setter Property="Background" Value="{StaticResource CorEmUso}"/>
+        </Style>
+
+        <Style x:Key="EstiloBotaoAviso" TargetType="Button" BasedOn="{StaticResource EstiloBotaoBase}">
+            <Setter Property="Background" Value="{StaticResource CorAviso}"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

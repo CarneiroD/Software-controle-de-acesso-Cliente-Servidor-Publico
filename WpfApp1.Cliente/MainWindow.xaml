@@ -1,0 +1,150 @@
+﻿<Window x:Class="WpfApp1.Cliente.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Controle de Tempo"
+        Height="550"
+        Width="850"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="{StaticResource CorFundo}"
+        Closing="Window_Closing">
+
+    <Grid>
+
+        <!-- INTERFACE NORMAL -->
+        <Grid x:Name="InterfaceNormal"
+              Margin="40">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                x:Name="NomeComputadorText"
+                Grid.Row="0"
+                Text="PC 01"
+                FontSize="28"
+                FontWeight="Bold"
+                Foreground="{StaticResource CorTextoPrimario}"
+                HorizontalAlignment="Center"/>
+
+            <StackPanel
+                Grid.Row="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+
+                <TextBlock
+                    Text="TEMPO RESTANTE"
+                    FontSize="16"
+                    Foreground="{StaticResource CorTextoSecundario}"
+                    HorizontalAlignment="Center"/>
+
+                <TextBlock
+                    x:Name="TempoText"
+                    Text="01:00:00"
+                    FontSize="88"
+                    FontWeight="Bold"
+                    FontFamily="Consolas"
+                    Foreground="{StaticResource CorEmUso}"
+                    HorizontalAlignment="Center"
+                    Margin="0,8,0,16"/>
+
+                <TextBlock
+                    x:Name="EstadoText"
+                    Text="DISPONÍVEL"
+                    FontSize="20"
+                    FontWeight="SemiBold"
+                    Foreground="{StaticResource CorDisponivel}"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,30"/>
+
+                <Button
+                    x:Name="BotaoIniciar"
+                    Content="INICIAR"
+                    Width="240"
+                    Height="56"
+                    FontSize="20"
+                    Margin="0,0,0,12"
+                    Style="{StaticResource EstiloBotaoPrimario}"
+                    Click="BotaoIniciar_Click"/>
+
+                <Button
+                    x:Name="BotaoExtensao"
+                    Content="SOLICITAR +30 MINUTOS"
+                    Width="240"
+                    Height="50"
+                    FontSize="16"
+                    Style="{StaticResource EstiloBotaoAviso}"
+                    Click="BotaoExtensao_Click"/>
+
+            </StackPanel>
+
+            <TextBlock
+                x:Name="MensagemText"
+                Grid.Row="2"
+                Text=""
+                FontSize="14"
+                Foreground="{StaticResource CorTextoSecundario}"
+                HorizontalAlignment="Center"
+                TextWrapping="Wrap"
+                Margin="0,20,0,0"/>
+
+        </Grid>
+
+
+        <!-- TELA DE BLOQUEIO -->
+        <Grid x:Name="TelaBloqueio"
+              Visibility="Collapsed"
+              Background="#0D0D14">
+
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+                <TextBlock
+                    Text="🔒"
+                    FontSize="56"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,16"/>
+
+                <TextBlock
+                    Text="COMPUTADOR BLOQUEADO"
+                    Foreground="{StaticResource CorBloqueado}"
+                    FontSize="40"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"
+                    TextAlignment="Center"/>
+
+                <TextBlock
+                    Text="O tempo desta sessão foi encerrado."
+                    Foreground="{StaticResource CorTextoPrimario}"
+                    FontSize="22"
+                    Margin="0,22,0,8"
+                    HorizontalAlignment="Center"
+                    TextAlignment="Center"/>
+
+                <TextBlock
+                    Text="Aguarde o administrador liberar o acesso."
+                    Foreground="{StaticResource CorTextoSecundario}"
+                    FontSize="16"
+                    HorizontalAlignment="Center"
+                    TextAlignment="Center"/>
+
+                <TextBlock
+                    x:Name="TempoBloqueadoText"
+                    Text="TEMPO: 00:00:00"
+                    Foreground="{StaticResource CorTextoSecundario}"
+                    FontSize="16"
+                    FontFamily="Consolas"
+                    Margin="0,26,0,0"
+                    HorizontalAlignment="Center"/>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</Window>

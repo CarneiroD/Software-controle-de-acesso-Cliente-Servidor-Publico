@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="WpfApp1.Cliente/WpfApp1.Cliente.csproj" Id="7115c03a-bdfe-4407-a460-bdc088f15d52" />
+  <Project Path="WpfApp1.Core/WpfApp1.Core.csproj" Id="1e43b1e0-e58b-44eb-ab9f-968b765f2a71" />
+  <Project Path="WpfApp1.Server/WpfApp1.Server.csproj" Id="fbf79dc4-fcec-4ef4-94bb-f9c45cca28ab" />
+  <Project Path="WpfApp1/WpfApp1.csproj" />
+</Solution>

@@ -1,0 +1,47 @@
+﻿    <Window x:Class="WpfApp1.HistoricoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Histórico de Uso"
+        Height="600"
+        Width="800"
+        WindowStartupLocation="CenterOwner"
+        Background="{StaticResource CorFundo}">
+
+    <Grid Margin="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Histórico de Sessões"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Foreground="{StaticResource CorTextoPrimario}"
+                   Margin="0,0,0,15"/>
+
+        <DataGrid x:Name="GradeHistorico"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  HeadersVisibility="Column"
+                  Background="{StaticResource CorCard}"
+                  Foreground="{StaticResource CorTextoPrimario}"
+                  RowBackground="{StaticResource CorCard}"
+                  BorderThickness="0"
+                  GridLinesVisibility="Horizontal">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Computador" Binding="{Binding Computador}" Width="100"/>
+                <DataGridTextColumn Header="Início" Binding="{Binding InicioFormatado}" Width="150"/>
+                <DataGridTextColumn Header="Fim" Binding="{Binding FimFormatado}" Width="150"/>
+                <DataGridTextColumn Header="Duração" Binding="{Binding DuracaoFormatada}" Width="100"/>
+                <DataGridTextColumn Header="Motivo" Binding="{Binding MotivoFormatado}" Width="*"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+
+</Window>
