@@ -1,6 +1,3 @@
-<img width="1827" height="688" alt="Captura de tela 2026-09-14 120158" src="https://github.com/user-attachments/assets/51a34910-613e-438e-8102-c7a9e1d4ae3a" />
-<img width="775" height="586" alt="Captura de tela 2026-09-14 111853" src="https://github.com/user-attachments/assets/dcc2f2f5-d839-45a0-9075-c2de258152a0" />
-<img width="1105" height="621" alt="Captura de tela 2026-09-14 120338" src="https://github.com/user-attachments/assets/93b54dd6-5541-4401-8298-dd636b447615" />
 # Sistema de Controle de Tempo e Acesso a Computadores
 
 Sistema cliente-servidor desenvolvido em **C# e .NET 10** para gerenciamento centralizado do tempo de utilização de computadores em uma rede local.
@@ -115,3 +112,7 @@ A arquitetura foi projetada para permitir a expansão futura do sistema para out
 Projeto em desenvolvimento para fins de estudo, portfólio e futura utilização em ambiente real.
 
 > **Nota:** funcionalidades de produção relacionadas ao bloqueio do sistema operacional e segurança administrativa ainda estão em desenvolvimento e não devem ser utilizadas em ambiente produtivo.
+
+<img width="1827" height="688" alt="Captura de tela 2026-09-14 120158" src="https://github.com/user-attachments/assets/51a34910-613e-438e-8102-c7a9e1d4ae3a" />
+<img width="1827" height="688" alt="Captura de tela 2026-09-14 111853" src="https://github.com/user-attachments/assets/dcc2f2f5-d839-45a0-9075-c2de258152a0" />
+<img width="1827" height="688" alt="Captura de tela 2026-09-14 120338" src="https://github.com/user-attachments/assets/93b54dd6-5541-4401-8298-dd636b447615" />
